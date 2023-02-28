@@ -1,8 +1,11 @@
 import React from 'react'
+import ChatPage from './ChatPage'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <ChatPage/>
+    </div>
   )
 }
 
