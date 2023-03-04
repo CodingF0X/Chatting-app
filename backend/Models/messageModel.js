@@ -3,7 +3,7 @@ const schema = mongoose.Schema
 
 const messageSchema = new schema({
     sender:{
-        type:mongoose.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'User'
     },
     content:{
@@ -11,7 +11,7 @@ const messageSchema = new schema({
         trim:true
     },
     chat:{
-        type:mongoose.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Chat'
     }
 },{timestamps:true})

@@ -9,6 +9,7 @@ const cors = require('cors')
 //-- ROUTES --//
 const authRoutes = require('./Routes/authRoter')
 const userRoutes = require('./Routes/userRouter')
+const ConversationRoutes = require('./Routes/conversationRouter')
 
 app.use(cors())
 app.use(express.json())
@@ -27,4 +28,5 @@ mongoose.connect(process.env.MONGO_URI,()=>{
 
 app.use('/api/auth',authRoutes)
 app.use('/api/user',userRoutes)
+app.use('/api/chat',ConversationRoutes)
 
